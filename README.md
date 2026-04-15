@@ -71,6 +71,38 @@ pytest
 
 You can add more tests in `tests/test_recommender.py`.
 
+Screenshot for Phase 3:
+![Screenshot](<Screenshot 2026-04-15 at 3.57.02 AM.png>)
+
+First prompt when creating a commit message (shortened it after):
+feat: Implement music recommendation engine with working CLI-first simulation
+
+Implement complete recommendation system with scoring and ranking:
+- load_songs(): CSV parser with proper type conversion for numerical attributes
+- score_song(): Weighted scoring algorithm matching genre, mood, energy, and valence
+- recommend_songs(): Pythonic ranking using list comprehension and sorted()
+
+Add formatted CLI output displaying song rankings with detailed scoring reasons.
+Update imports for module run support (python -m src.main).
+
+The simulation is fully functional end-to-end, demonstrating:
+  • CSV data loading with type safety
+  • Multi-criteria scoring with explainable results
+  • Top-k ranking with reasoning for each recommendation
+  • Clean terminal UI showing recommendations with breakdown
+
+Tested with default pop/happy profile producing expected results.
+
+
+Shortened it to:
+feat: Implement music recommender CLI-first simulation
+
+- load_songs(): Parse CSV with proper type conversion
+- score_song(): Weighted scoring for genre, mood, energy, valence
+- recommend_songs(): Rank songs with Pythonic sorting and filtering
+- Formatted CLI output showing top-k recommendations with explanations
+- Working end-to-end simulation (testable via python -m src.main)
+
 ---
 
 ## Experiments You Tried
@@ -80,6 +112,16 @@ Use this section to document the experiments you ran. For example:
 - What happened when you changed the weight on genre from 2.0 to 0.5
 - What happened when you added tempo or valence to the score
 - How did your system behave for different types of users
+
+Screenshots of Tests:
+High Energy Pop Results: (Screenshot 2026-04-15 at 4.48.56 AM.png)
+![High Energy Pop](<Screenshot 2026-04-15 at 4.48.56 AM.png>)
+
+Chill Lofi Results: (Screenshot 2026-04-15 at 4.49.31 AM.png)
+![Chill Lofi](<Screenshot 2026-04-15 at 4.49.31 AM.png>)
+
+Deep Intense Rock: (Screenshot 2026-04-15 at 4.50.09 AM.png)
+![Deep Intense Rock](<Screenshot 2026-04-15 at 4.50.09 AM.png>)
 
 ---
 
