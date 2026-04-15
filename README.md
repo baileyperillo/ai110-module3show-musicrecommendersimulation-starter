@@ -29,6 +29,13 @@ Some prompts to answer:
 
 You can include a simple diagram or bullet list if helpful.
 
+Recommendations is determined by collaborative filtering, which is suggestions based on user's song patterns (like those who listen to song A also lsten to song B), and Content-based filtering, which suggests content based on the features of the consumed content (like recommending songs in the same genre as most of the songs the user listens to). Collaborative filtering helps with discovering new music based on other user's behavior; Content-based filtering helps with discovering new music based on the user's song history.
+
+
+Based on the recommendations from CoPilot, my design for content-based recommendation will be prioritize or at least have genre and mood as top priority and energy as second priority in `Song`. Therefore, my `UserProfile` should store preferred_moods, preferred_moods, and preferred_energy, at least. I can also consider storing liked songs, saved songs, or recently playes and skipped songs.
+
+My plan is to have the application compare the three features; mood, genre, and energy_target. Based on the suggestions from both Claude and the checklist, The system will use a yes or no point system. If the mood matches, it will recieve 2 points. If not, it will recive 0 points. It will be given the most points for it's similarities. Genre will recieve the second most amount of points; if the song genre is the same as the favorite genre, it will recieve 1 point, otherwise no points. Energy target will use a special formula to determine it's points. The other catagories will not be scored in this recommender. I am aware that mood especially will be a bias in my system, along with genre and energy and in this order they will be prioritized.
+
 ---
 
 ## Getting Started
